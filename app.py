@@ -3,10 +3,12 @@ import json
 import os
 from deepgram import Deepgram
 from flask import Flask, request, jsonify
-from dotenv import load_dotenv 
+from dotenv import load_dotenv
+from flask_cors import CORS 
 
 
 app = Flask(__name__)
+CORS(app)
 
 # Cargar las variables de entorno desde el archivo .env
 load_dotenv()
